@@ -13,8 +13,8 @@
 		B290EACC24279369007BFD62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B290EACB24279369007BFD62 /* Assets.xcassets */; };
 		B290EACF24279369007BFD62 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B290EACE24279369007BFD62 /* Preview Assets.xcassets */; };
 		B290EAD224279369007BFD62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B290EAD024279369007BFD62 /* LaunchScreen.storyboard */; };
-		B290EADD24279369007BFD62 /* indonewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290EADC24279369007BFD62 /* indonewsTests.swift */; };
-		B290EAE824279369007BFD62 /* indonewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290EAE724279369007BFD62 /* indonewsUITests.swift */; };
+		B290EAF724279AAF007BFD62 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290EAF624279AAF007BFD62 /* NetworkManager.swift */; };
+		B290EAF924279BCD007BFD62 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290EAF824279BCD007BFD62 /* NewsData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +44,9 @@
 		B290EAD124279369007BFD62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B290EAD324279369007BFD62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B290EAD824279369007BFD62 /* indonewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = indonewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B290EADC24279369007BFD62 /* indonewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = indonewsTests.swift; sourceTree = "<group>"; };
-		B290EADE24279369007BFD62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B290EAE324279369007BFD62 /* indonewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = indonewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B290EAE724279369007BFD62 /* indonewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = indonewsUITests.swift; sourceTree = "<group>"; };
-		B290EAE924279369007BFD62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B290EAF624279AAF007BFD62 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B290EAF824279BCD007BFD62 /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				B290EAC424279367007BFD62 /* indonews */,
-				B290EADB24279369007BFD62 /* indonewsTests */,
-				B290EAE624279369007BFD62 /* indonewsUITests */,
 				B290EAC324279367007BFD62 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +97,7 @@
 			children = (
 				B290EAC524279367007BFD62 /* AppDelegate.swift */,
 				B290EAC724279367007BFD62 /* SceneDelegate.swift */,
+				B290EAF524279A91007BFD62 /* Models */,
 				B290EAC924279367007BFD62 /* ContentView.swift */,
 				B290EACB24279369007BFD62 /* Assets.xcassets */,
 				B290EAD024279369007BFD62 /* LaunchScreen.storyboard */,
@@ -118,22 +115,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B290EADB24279369007BFD62 /* indonewsTests */ = {
+		B290EAF524279A91007BFD62 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B290EADC24279369007BFD62 /* indonewsTests.swift */,
-				B290EADE24279369007BFD62 /* Info.plist */,
+				B290EAF624279AAF007BFD62 /* NetworkManager.swift */,
+				B290EAF824279BCD007BFD62 /* NewsData.swift */,
 			);
-			path = indonewsTests;
-			sourceTree = "<group>";
-		};
-		B290EAE624279369007BFD62 /* indonewsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B290EAE724279369007BFD62 /* indonewsUITests.swift */,
-				B290EAE924279369007BFD62 /* Info.plist */,
-			);
-			path = indonewsUITests;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,9 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B290EAF724279AAF007BFD62 /* NetworkManager.swift in Sources */,
 				B290EAC624279367007BFD62 /* AppDelegate.swift in Sources */,
 				B290EAC824279367007BFD62 /* SceneDelegate.swift in Sources */,
 				B290EACA24279367007BFD62 /* ContentView.swift in Sources */,
+				B290EAF924279BCD007BFD62 /* NewsData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B290EADD24279369007BFD62 /* indonewsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B290EAE824279369007BFD62 /* indonewsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

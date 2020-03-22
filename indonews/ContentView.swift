@@ -8,9 +8,20 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    
+    @ObservedObject var networkManager = NetworkManager()
+    
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            List(networkManager.news) { item in
+                Text(item.title)
+            }
+        .navigationBarTitle("INDO NEWS HUB")
+        }.onAppear {
+            self.networkManager.fetchData()
+        }
     }
 }
 
@@ -19,3 +30,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
