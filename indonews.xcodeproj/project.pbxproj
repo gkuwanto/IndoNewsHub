@@ -15,6 +15,8 @@
 		B290EAD224279369007BFD62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B290EAD024279369007BFD62 /* LaunchScreen.storyboard */; };
 		B290EAF724279AAF007BFD62 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290EAF624279AAF007BFD62 /* NetworkManager.swift */; };
 		B290EAF924279BCD007BFD62 /* NewsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290EAF824279BCD007BFD62 /* NewsData.swift */; };
+		B290EAFE2427A7B0007BFD62 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290EAFD2427A7B0007BFD62 /* DetailView.swift */; };
+		B290EB002427A9C6007BFD62 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B290EAFF2427A9C6007BFD62 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,9 @@
 		B290EAE324279369007BFD62 /* indonewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = indonewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B290EAF624279AAF007BFD62 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B290EAF824279BCD007BFD62 /* NewsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsData.swift; sourceTree = "<group>"; };
+		B290EAFD2427A7B0007BFD62 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		B290EAFF2427A9C6007BFD62 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		B290EB012427AB13007BFD62 /* indonews.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = indonews.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +100,11 @@
 		B290EAC424279367007BFD62 /* indonews */ = {
 			isa = PBXGroup;
 			children = (
+				B290EB012427AB13007BFD62 /* indonews.entitlements */,
 				B290EAC524279367007BFD62 /* AppDelegate.swift */,
 				B290EAC724279367007BFD62 /* SceneDelegate.swift */,
 				B290EAF524279A91007BFD62 /* Models */,
-				B290EAC924279367007BFD62 /* ContentView.swift */,
+				B290EAFA2427A769007BFD62 /* Views */,
 				B290EACB24279369007BFD62 /* Assets.xcassets */,
 				B290EAD024279369007BFD62 /* LaunchScreen.storyboard */,
 				B290EAD324279369007BFD62 /* Info.plist */,
@@ -122,6 +128,16 @@
 				B290EAF824279BCD007BFD62 /* NewsData.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B290EAFA2427A769007BFD62 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B290EAC924279367007BFD62 /* ContentView.swift */,
+				B290EAFD2427A7B0007BFD62 /* DetailView.swift */,
+				B290EAFF2427A9C6007BFD62 /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,10 +272,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B290EAF724279AAF007BFD62 /* NetworkManager.swift in Sources */,
+				B290EAFE2427A7B0007BFD62 /* DetailView.swift in Sources */,
 				B290EAC624279367007BFD62 /* AppDelegate.swift in Sources */,
 				B290EAC824279367007BFD62 /* SceneDelegate.swift in Sources */,
 				B290EACA24279367007BFD62 /* ContentView.swift in Sources */,
 				B290EAF924279BCD007BFD62 /* NewsData.swift in Sources */,
+				B290EB002427A9C6007BFD62 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,8 +440,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = indonews/indonews.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"indonews/Preview Content\"";
+				DEVELOPMENT_TEAM = Y8M952P9WN;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = indonews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -432,6 +454,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gkuwanto.indonews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -441,8 +466,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = indonews/indonews.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"indonews/Preview Content\"";
+				DEVELOPMENT_TEAM = Y8M952P9WN;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = indonews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,6 +480,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.gkuwanto.indonews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
