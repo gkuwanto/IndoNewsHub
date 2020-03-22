@@ -52,6 +52,7 @@
 		B290EAFD2427A7B0007BFD62 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		B290EAFF2427A9C6007BFD62 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		B290EB012427AB13007BFD62 /* indonews.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = indonews.entitlements; sourceTree = "<group>"; };
+		B290EB022427AD75007BFD62 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 		B290EAB924279367007BFD62 = {
 			isa = PBXGroup;
 			children = (
+				B290EB022427AD75007BFD62 /* README.md */,
 				B290EAC424279367007BFD62 /* indonews */,
 				B290EAC324279367007BFD62 /* Products */,
 			);
